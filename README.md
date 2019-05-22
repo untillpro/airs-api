@@ -1,2 +1,7 @@
 # airs-api
-Decription of interfaces to air services
+
+# Documentation
+
+- [Requests](docs/requests.md)
+  - [PArtitioned Requests](docs/requests-partitioned.md)
+
