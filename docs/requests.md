@@ -65,13 +65,13 @@ All parts are optional
     - `GET api.air.untill.com/air-bo-view/678/articles`
     - `GET api.air.untill.com/air-bo-view/articles?location=678`
   - Get article with ID=5000002361 from location 678
-    - `GET api.air.untill.com/air-bo-view/678/articles/5000002361`
+    - `GET api.air.untill.com/air-bo-view/678/articles?id=5000002361`
     - `GET api.air.untill.com/air-bo-view/articles?location=678&id=5000002361`
   - Get special representation of article with ID=5000002361 from location 678
-    - `GET api.air.untill.com/air-bo-view/678/articles/special/5000002361`
+    - `GET api.air.untill.com/air-bo-view/678/articles/special?id=5000002361`
   - Get articles from locations 1 and 2 where name contains coca
     - `GET api.air.untill.com/air-bo-view/articles/?location[]=1&location[]=2&where[name][contains]=coca`
-  - Get list of resources from location 678
+  - *Get list of resources from location 678* (?)
     - `GET api.air.untill.com/air-bo-view/678`
 
 ## Registering Sales
