@@ -1,8 +1,12 @@
 # airs-api
 
-# Documentation    
+# Basics
 
-- [CRUD](docs/crud/README.md)
-- [Requests](docs/requests.md)
-  - [PArtitioned Requests](docs/requests-partitioned.md)
+- [Queues & Requests](docs/requests.md)
+- [Partitioned Requests](docs/requests-partitioned.md)
+
+# BO Requests
+
+- [BO CRUD](docs/crud/README.md)
+
 
