@@ -38,8 +38,6 @@ If success:
                 "name": "Location 654"
             },
         },
-        "prev": "123456", //prev item id
-        "next": "654321", //next item id
         "data" : {
             "1": { // location id
                 "id": 123456,

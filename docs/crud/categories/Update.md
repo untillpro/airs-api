@@ -16,7 +16,7 @@ content-type: application/json
 ```
 
 `id` - required param
-`[data fields]` - any of data fields described in [Create.md](Create.md)
+`data` - any of data fields described in [Create.md](Create.md)
 
 ## Response: 
 

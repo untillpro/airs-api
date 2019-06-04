@@ -23,22 +23,7 @@ GET https://api.air.untill.com/air-bo-view/category?location[]=1&location[]=44&l
 ```http
 GET https://api.air.untill.com/air-bo-view/category?page=1&pagesize=50
 ```
-
-**Specified order**
-```http
-GET https://api.air.untill.com/air-bo-view/category?order_by[name]=asc
-```
-
-**Multy ordering**
-```http
-GET https://api.air.untill.com/air-bo-view/category?order_by[name]=asc&order_by[location]=desc
-```
-
-**Specified status**
-```http
-GET https://api.air.untill.com/air-bo-view/category?show_deleted=1
-```
-In this case category with status 2 will be also returned
+Used in case of serverside paggination.
 
 ##Response example
 

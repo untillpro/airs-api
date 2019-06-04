@@ -11,11 +11,7 @@ content-type: application/json
         "name": "Bar",
         "hq_id": "Bar" | null,
         "state": 1 | 0,
-        "ml_name": {
-            "eng": "Bar",
-            "rus": "Бар",
-            ...
-        }
+        "ml_name": { ... }
     }
 }
 ```
