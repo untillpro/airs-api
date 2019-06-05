@@ -19,12 +19,33 @@
 }
 ```
 
+Что я передаю на сервер:
 
-В каком виде это должно храниться в блобе:
 ```javascript
 {
     "id": Number,
     "state": Number,
+    "data": {
+        "name": String,
+        "hq_id": String,
+        "gr_number": Number,
+        "category": {
+            "id": Number,
+            "name": String
+        },
+        "group_vat": Number,
+        "group_vat_sign": String,
+        "sec_group_vat": Number,
+        "sec_group_vat_sign": String,
+        "group_type": Number,
+        "ml_name": Blob
+    }
+}
+```
+
+В каком виде это должно храниться в блобе:
+```javascript
+{
     "name": String,
     "hq_id": String,
     "gr_number": Number,
