@@ -37,3 +37,5 @@ In other case returns errors:
 ```
 
 [← Back](README.md)
+
+curl -v -d {\"state\":1,\"abcd\":{\"name\":\"Bar2\",\"hq_id\":\"Bar\",\"ml_name\":{\"eng\":\"Bar\"}}} -H "Content-type: application/json" http://kvvw10:8822/air-bo/1/category
