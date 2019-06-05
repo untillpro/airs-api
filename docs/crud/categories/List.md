@@ -43,7 +43,7 @@ If success:
             },
         },
         "items": {  //grouped by HQ_ID (or NAME if HQ_ID)
-            "Ace": { 
+            "Bar": { 
                 "1": { // location id
                     "id": 123456,
                     "name": "Bar",
