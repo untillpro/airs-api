@@ -8,5 +8,3 @@
 # BO Requests
 
 - [BO CRUD](docs/crud/README.md)
-
-
