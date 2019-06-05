@@ -3,12 +3,11 @@
 ## Request:
 
 ```http
-PUT https://api.air.untill.com/air-bo/1/category HTTP/1.1
+PUT https://air.untill.com/api/air-bo/1/category HTTP/1.1
 content-type: application/json
 
 {
-    "id": [number],
-    "state": 0 | 1 | 2
+    "id": [number]
 }
 ```
 

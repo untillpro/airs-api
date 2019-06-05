@@ -3,7 +3,7 @@
 ## Request:
 
 ```http
-DELETE https://api.air.untill.com/air-bo/1/articles HTTP/1.1
+DELETE https://air.untill.com/api/air-bo/1/articles HTTP/1.1
 content-type: application/json
 
 {

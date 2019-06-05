@@ -3,7 +3,7 @@
 ## Request: 
 
 ```http
-POST https://api.air.untill.com/air-bo-view/locations HTTP/1.1
+POST https://air.untill.com/api/air-bo-view/locations HTTP/1.1
 content-type: application/json
 
 {

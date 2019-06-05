@@ -3,7 +3,7 @@
 ## Request: 
 
 ```http
-GET https://api.air.untill.com/air-bo-view/locations
+GET https://air.untill.com/api/air-bo-view/locations
 ```
 
 ## Response: 

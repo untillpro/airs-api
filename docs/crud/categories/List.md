@@ -4,24 +4,24 @@
 
 **All category request**
 ```http
-GET https://api.air.untill.com/air-bo-view/category
+GET https://air.untill.com/api/air-bo-view/category
 ```
 
 **With specified location:**
 
 ```http
-GET https://api.air.untill.com/air-bo-view/category?location=1
+GET https://air.untill.com/api/air-bo-view/category?location=1
 ```
 
 **With multy-location:**
 
 ```http
-GET https://api.air.untill.com/air-bo-view/category?location[]=1&location[]=44&location[]=654
+GET https://air.untill.com/api/air-bo-view/category?location[]=1&location[]=44&location[]=654
 ```
 
 **Specified page and pagesize**
 ```http
-GET https://api.air.untill.com/air-bo-view/category?page=1&pagesize=50
+GET https://air.untill.com/api/air-bo-view/category?page=1&pagesize=50
 ```
 Used in case of serverside paggination.
 

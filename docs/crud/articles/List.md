@@ -4,39 +4,39 @@
 
 **All articles request**
 ```http
-GET https://api.air.untill.com/air-bo-view/articles
+GET https://air.untill.com/api/air-bo-view/articles
 ```
 
 **With specified location:**
 
 ```http
-GET https://api.air.untill.com/air-bo-view/articles?location=1
+GET https://air.untill.com/api/air-bo-view/articles?location=1
 ```
 
 **With multy-location:**
 
 ```http
-GET https://api.air.untill.com/air-bo-view/articles?location[]=1&location[]=44&location[]=654
+GET https://air.untill.com/api/air-bo-view/articles?location[]=1&location[]=44&location[]=654
 ```
 
 **Specified page and pagesize**
 ```http
-GET https://api.air.untill.com/air-bo-view/articles?page=1&pagesize=50
+GET https://air.untill.com/api/air-bo-view/articles?page=1&pagesize=50
 ```
 
 **Specified order**
 ```http
-GET https://api.air.untill.com/air-bo-view/articles?order_by[name]=asc
+GET https://air.untill.com/api/air-bo-view/articles?order_by[name]=asc
 ```
 
 **Multy ordering**
 ```http
-GET https://api.air.untill.com/air-bo-view/articles?order_by[name]=asc&order_by[location]=desc
+GET https://air.untill.com/api/air-bo-view/articles?order_by[name]=asc&order_by[location]=desc
 ```
 
 **Specified status**
 ```http
-GET https://api.air.untill.com/air-bo-view/articles?show_deleted=1
+GET https://air.untill.com/api/air-bo-view/articles?show_deleted=1
 ```
 In this case articles with status 2 will be also returned
 

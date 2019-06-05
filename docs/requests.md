@@ -46,33 +46,33 @@ All parts are optional
   - Without  `resource-id` returns list of resources
   - With `resource-id` describes given resource
 - if resource becomes incompatible with previous version its name must be changed, say
-  - `api.air.untill.com/air-bo/678/articles.v2`
-  - `api.air.untill.com/air-bo/678/articles2`
+  - `air.untill.com/api/air-bo/678/articles.v2`
+  - `air.untill.com/api/air-bo/678/articles2`
 
 
 # Requests Examples
 
 ## Configuring BO
 
-  - New/Edit article: `POST/PATCH api.air.untill.com/air-bo/678/articles`
+  - New/Edit article: `POST/PATCH air.untill.com/api/air-bo/678/articles`
     - id is always passsed as a part of body
-  - Doing something special with article: `POST api.air.untill.com/air-bo/678/articles.doSpecial`
+  - Doing something special with article: `POST air.untill.com/api/air-bo/678/articles.doSpecial`
     - id is always passsed as a part of body    
 
 ## Viewing BO
 
   - Get all articles from location 678
-    - `GET api.air.untill.com/air-bo-view/678/articles`
-    - `GET api.air.untill.com/air-bo-view/articles?location=678`
+    - `GET air.untill.com/api/air-bo-view/678/articles`
+    - `GET air.untill.com/api/air-bo-view/articles?location=678`
   - Get article with ID=5000002361 from location 678
-    - `GET api.air.untill.com/air-bo-view/678/articles?id=5000002361`
-    - `GET api.air.untill.com/air-bo-view/articles?location=678&id=5000002361`
+    - `GET air.untill.com/api/air-bo-view/678/articles?id=5000002361`
+    - `GET air.untill.com/api/air-bo-view/articles?location=678&id=5000002361`
   - Get special representation of article with ID=5000002361 from location 678
-    - `GET api.air.untill.com/air-bo-view/678/articles/special?id=5000002361`
+    - `GET air.untill.com/api/air-bo-view/678/articles/special?id=5000002361`
   - Get articles from locations 1 and 2 where name contains coca
-    - `GET api.air.untill.com/air-bo-view/articles/?location[]=1&location[]=2&where[name][contains]=coca`
+    - `GET air.untill.com/api/air-bo-view/articles/?location[]=1&location[]=2&where[name][contains]=coca`
   - *Get list of resources from location 678* (?)
-    - `GET api.air.untill.com/air-bo-view/678`
+    - `GET air.untill.com/api/air-bo-view/678`
 
 ## Registering Sales
 
@@ -80,31 +80,31 @@ All parts are optional
 
 ## Password Authentication
 
-- `GET/POST api.air.untill.com/registry/auth?usr=<user-name>&pwd=<password>`
+- `GET/POST air.untill.com/api/registry/auth?usr=<user-name>&pwd=<password>`
 
 ## Modifying Registry
 
 Registry is a single-party queue, so workspace is not specified
 
-- `POST/PATCH api.air.untill.com/registry/workspaces`
-- `POST/PATCH api.air.untill.com/registry/users`
-- `POST/PATCH api.air.untill.com/registry/devices`
-- `POST/PATCH api.air.untill.com/registry/applications`
+- `POST/PATCH air.untill.com/api/registry/workspaces`
+- `POST/PATCH air.untill.com/api/registry/users`
+- `POST/PATCH air.untill.com/api/registry/devices`
+- `POST/PATCH air.untill.com/api/registry/applications`
 
 ## Available Modules
 
 - Get list of available module manifests
-  - `GET api.air.untill.com/modules/manifests`
+  - `GET air.untill.com/api/modules/manifests`
 - Get module index.html
-  - `GET api.air.untill.com/modules/content/untillpro.md-mermaid-renderer/index.html`
+  - `GET air.untill.com/api/modules/content/untillpro.md-mermaid-renderer/index.html`
 
 
 ## Module Config
 
 - Get config, JSON
-  - `GET api.air.untill.com/users-view/config/untillpro.md-mermaid-renderer`
+  - `GET air.untill.com/api/users-view/config/untillpro.md-mermaid-renderer`
 - Save config, JSON
-  - `POST api.air.untill.com/users/config/<module-id>`
+  - `POST air.untill.com/api/users/config/<module-id>`
 
 # Links
 

@@ -6,19 +6,19 @@
 
 **Get article data for all available locations**
 ```
-GET https://api.air.untill.com/air-bo-view/articles?id=123456
+GET https://air.untill.com/api/air-bo-view/articles?id=123456
 ```
 
 **Get article data with specified location:**
 
 ```
-GET https://api.air.untill.com/air-bo-view/articles?id=123456&location=1
+GET https://air.untill.com/api/air-bo-view/articles?id=123456&location=1
 ```
 
 **Get article data with multy-location:**
 
 ```
-GET https://api.air.untill.com/air-bo-view/articles?id=123456&location[]=1&location[]=44&location[]=654
+GET https://air.untill.com/api/air-bo-view/articles?id=123456&location[]=1&location[]=44&location[]=654
 ```
 
 ##Response example
