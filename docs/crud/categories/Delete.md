@@ -8,9 +8,7 @@ content-type: application/json
 
 {
     "id": [number],
-    "data": {
-        "state": 0 | 1 | 2
-    }
+    "state": 0 | 1 | 2
 }
 ```
 

@@ -7,10 +7,10 @@ POST https://api.air.untill.com/air-bo/1/category HTTP/1.1
 content-type: application/json
 
 {
+    "state": 1 | 0,
     "data": {
         "name": "Bar",
         "hq_id": "Bar" | null,
-        "state": 1 | 0,
         "ml_name": { ... }
     }
 }

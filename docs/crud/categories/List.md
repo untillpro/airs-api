@@ -42,6 +42,7 @@ If success:
                 "name": "Location 654",
             },
         },
+        "total": 47,
         "items": {  //grouped by HQ_ID (or NAME if HQ_ID)
             "Bar": { 
                 "1": { // location id
@@ -49,11 +50,7 @@ If success:
                     "name": "Bar",
                     "hq_id": "Bar",
                     "state": 0,
-                    "ml_name": {
-                        "eng": "Bar",
-                        "rus": "Бар",
-                        ...
-                    }
+                    "ml_name": {...}
                 },
 
                 "44": { // location id
@@ -61,11 +58,7 @@ If success:
                     "name": "Bar 1",
                     "hq_id": "Bar",
                     "state": 0,
-                    "ml_name": {
-                        "eng": "Bar 1",
-                        "rus": "Бар 1",
-                        ...
-                    }
+                    "ml_name": {...}
                 }
 
                 "654": { // location id
@@ -73,11 +66,7 @@ If success:
                     "name": "Bar 2",
                     "hq_id": "Bar",
                     "state": 1,
-                    "ml_name": {
-                        "eng": "Bar 2",
-                        "rus": "Бар 2",
-                        ...
-                    }
+                    "ml_name": {...}
                 }
             },
             ...  
