@@ -1,4 +1,4 @@
-## Articles CRUD
+## User groups CRUD
 
 [← Back](../README.md)
 

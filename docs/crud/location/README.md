@@ -1,4 +1,4 @@
-## Articles CRUD
+## Locations CRUD
 
 [← Back](../README.md)
 
@@ -7,7 +7,5 @@
 1. [Read](Read.md)
 1. [Update](Update.md)
 1. [Delete](Delete.md)
-
-### Overview
 
 [← Back](../README.md)
