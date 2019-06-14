@@ -16,7 +16,7 @@ GET https://air.untill.com/api/air-bo-view/category?location=1
 **With multy-location:**
 
 ```http
-GET https://air.untill.com/api/air-bo-view/category?location[]=1&location[]=44&location[]=654
+GET https://air.untill.com/api/air-bo-view/category?location=1&location=44&location=654
 ```
 
 **Specified page and pagesize**
@@ -30,7 +30,10 @@ Used in case of serverside paggination.
 If success:
 
 ```javascript
-    {
+{
+    "Status": "Ok",
+    "StatusCode": 200,
+    "Data": {
         "locations": { //all selected locations
             "1": {
                 "name": "Location 1"
@@ -42,8 +45,7 @@ If success:
                 "name": "Location 654",
             },
         },
-        "total": 47,
-        "items": {  //grouped by HQ_ID (or NAME if HQ_ID)
+        "data": {  //grouped by HQ_ID (or NAME if HQ_ID)
             "Bar": { 
                 "1": { // location id
                     "id": 123456,
@@ -72,6 +74,7 @@ If success:
             ...  
         }
     }
+}
 ```
 
 - `location` object contains of locations, for what category was selected.
@@ -80,9 +83,9 @@ In other case returns errors:
 
 ```javascript
 {
-    "errors": [
-        String | Object
-    ]
+    "Status": "Bad request",
+    "StatusCode": 400,
+    "Data": "Error text"
 }
 ```
 

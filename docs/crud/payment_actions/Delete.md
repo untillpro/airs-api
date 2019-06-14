@@ -3,11 +3,11 @@
 ## Request:
 
 ```http
-PUT https://air.untill.com/api/air-bo/1/category HTTP/1.1
+PUT https://air.untill.com/api/air-bo/1/payment_actions HTTP/1.1
 content-type: application/json
 
 {
-    "id": [number]
+    "id": [number],
 }
 ```
 
@@ -17,12 +17,13 @@ If success:
 
 ```javascript
 {
-    "Status": "Ok",
-    "StatusCode": 200,
-    "Data": [ ... ] // updated items id array
+    {
+        "Status": "Ok",
+        "StatusCode": 200,
+        "Data": [ 123, 4324, 5435 ] //array of ids of removed items
+    }
 }
 ```
-
 In other case returns errors:
 
 ```javascript

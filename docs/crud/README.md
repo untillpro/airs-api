@@ -1,5 +1,17 @@
 # CRUD requests
 
 1. [Category](categories/README.md)
-1. [Locations](locations/README.md)
+1. [Food groups](foodgroups/README.md)
+1. [Courses](courses/README.md)
+1. [Price levels](pricelevels/README.md)
+1. [Departments](departments/README.md)
+1. [Sales areas](salesareas/README.md)
 1. [Articles](articles/README.md)
+1. [Functional panel tabs](paneltabs/README.md)
+1. [Application Payment Buttons](apppayments/README.md)
+1. [Discounts](discounts/README.md)
+1. [Periods](periods/README.md)
+1. [Payments](payments/README.md)
+1. [User groups](usergroups/README.md)
+1. [Users](users/README.md)
+1. [Locations](locations/README.md)

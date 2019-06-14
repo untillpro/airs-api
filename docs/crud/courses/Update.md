@@ -3,18 +3,21 @@
 ## Request: 
 
 ```http
-POST https://air.untill.com/api/air-bo/1/category HTTP/1.1
+PATCH https://air.untill.com/api/air-bo/1/course HTTP/1.1
 content-type: application/json
 
 {
-    "state": 1 | 0,
+    "id": 123,
+    "state": 0 | 1,
     "data": {
-        "name": "Bar",
-        "hq_id": "Bar" | null,
-        "ml_name": { ... }
+        [ data ]
     }
 }
 ```
+
+`id` - required param
+`state` - item new state
+`data` - any of data fields described in [Create.md](Create.md)
 
 ## Response: 
 
@@ -24,7 +27,7 @@ If success:
 {
     "Status": "Ok",
     "StatusCode": 200,
-    "Data": 1234567 // updated item id
+    "Data": 123456 //updated course id
 }
 ```
 

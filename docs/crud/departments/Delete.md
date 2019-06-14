@@ -3,7 +3,7 @@
 ## Request:
 
 ```http
-PUT https://air.untill.com/api/air-bo/1/category HTTP/1.1
+PUT https://air.untill.com/api/air-bo/1/department HTTP/1.1
 content-type: application/json
 
 {
@@ -19,7 +19,7 @@ If success:
 {
     "Status": "Ok",
     "StatusCode": 200,
-    "Data": [ ... ] // updated items id array
+    "Data": [ ... ] // deleted departments id array
 }
 ```
 

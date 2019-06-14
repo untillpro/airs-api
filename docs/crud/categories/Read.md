@@ -26,7 +26,10 @@ GET https://air.untill.com/api/air-bo-view/category?id=123456&location[]=1&locat
 If success:
 
 ```javascript
-    {
+{
+    "Status": "Ok",
+    "StatusCode": 200,
+    "Data": {
         "locations": { //all selected locations
             "1": {
                 "name": "Location 1"
@@ -64,15 +67,16 @@ If success:
             }
         }
     }
+}
 ```
 
 In other case returns errors:
 
 ```javascript
 {
-    "errors": [
-        String | Object
-    ]
+    "Status": "Bad request",
+    "StatusCode": 400,
+    "Data": "Error text"
 }
 ```
 

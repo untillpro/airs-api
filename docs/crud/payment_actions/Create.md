@@ -3,15 +3,21 @@
 ## Request: 
 
 ```http
-POST https://air.untill.com/api/air-bo/1/category HTTP/1.1
+POST https://air.untill.com/api/air-bo/1/payment_actions HTTP/1.1
 content-type: application/json
 
 {
-    "state": 1 | 0,
+    "state": 1,
     "data": {
-        "name": "Bar",
-        "hq_id": "Bar" | null,
-        "ml_name": { ... }
+        "num": 0,
+        "name": "Pay cash",
+        "hq_id": "Pay cash",
+        "button_code": "pay_cash",
+        "button_text": "Pay cash",
+        "action_data": "",
+        "type": 0,
+        "ml_name": {...},
+        
     }
 }
 ```
@@ -24,7 +30,7 @@ If success:
 {
     "Status": "Ok",
     "StatusCode": 200,
-    "Data": 1234567 // updated item id
+    "Data": [ ... ] //created items id
 }
 ```
 

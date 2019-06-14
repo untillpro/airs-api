@@ -3,7 +3,7 @@
 ## Request: 
 
 ```http
-POST https://air.untill.com/api/air-bo/1/category HTTP/1.1
+POST https://air.untill.com/api/air-bo/1/course HTTP/1.1
 content-type: application/json
 
 {
@@ -11,6 +11,10 @@ content-type: application/json
     "data": {
         "name": "Bar",
         "hq_id": "Bar" | null,
+        "changable": 0,
+        "coursenumber": 0,
+        "separate": 0,
+        "ask_to_change": 0
         "ml_name": { ... }
     }
 }
@@ -24,7 +28,7 @@ If success:
 {
     "Status": "Ok",
     "StatusCode": 200,
-    "Data": 1234567 // updated item id
+    "Data": 1234 // created item id
 }
 ```
 
