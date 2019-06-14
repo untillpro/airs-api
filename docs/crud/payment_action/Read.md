@@ -75,7 +75,7 @@ In other case returns errors:
 {
     "Status": "Bad request",
     "StatusCode": 400,
-    "Data": "Error text"
+    "Data": String
 }
 ```
 

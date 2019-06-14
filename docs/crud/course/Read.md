@@ -2,23 +2,13 @@
 
 ## Requests:
 
-`id` - is required parameter. If `id` param is not specified, request will follow [list request](List.md) logic.
-
-**Get course data for all available locations**
-```
-GET https://air.untill.com/api/air-bo-view/course?id=123456
-```
+`id` - required. 
+`location` - required.
 
 **Get course data with specified location:**
 
 ```
 GET https://air.untill.com/api/air-bo-view/course?id=123456&location=1
-```
-
-**Get course data with multy-location:**
-
-```
-GET https://air.untill.com/api/air-bo-view/course?id=123456&location[]=1&location[]=44&location[]=654
 ```
 
 ##Response example
@@ -48,7 +38,7 @@ If success:
                 "coursenumber": 0,
                 "separate": 0,
                 "ask_to_change": 0
-                "ml_name": { ... }
+                "ml_name": Blob
             },
 
             "44": { // location id
@@ -60,7 +50,7 @@ If success:
                 "coursenumber": 0,
                 "separate": 0,
                 "ask_to_change": 0
-                "ml_name": { ... }
+                "ml_name": Blob
             }
         }
     }
@@ -73,7 +63,7 @@ In other case returns errors:
 {
     "Status": "Bad request",
     "StatusCode": 400,
-    "Data": "Error text"
+    "Data": String
 }
 ```
 

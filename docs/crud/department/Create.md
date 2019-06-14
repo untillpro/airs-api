@@ -2,30 +2,31 @@
 
 ## Request: 
 
-```http
+```javascript
 POST https://air.untill.com/api/air-bo/1/department HTTP/1.1
 content-type: application/json
 
 {
     "state": 1,
     "data": {
-        "name": "Alcohols",
-        "hq_id": "Alcohols",
-        "dep_number": 10,
-        "max_supp_quantity": 5,
-        "max_cond_quantity": 5,
-        "ml_name": { ... },
-        "id_foodgroup": 1234567,
-        "id_options_supplement": 2345678,
-        "id_options_condiment": 3456789,
+        "name": String,
+        "hq_id": String,
+        "dep_number": Number,
+        "max_supp_quantity": Number,
+        "max_cond_quantity": Number,
+        "ml_name": Blob,
+        "id_foodgroup": Number, // link to `foodgroup` entity
+        "id_options_supplement": Number, // link to `option` entity
+        "id_options_condiment": Number, // link to `option` entity
         "button": {
-            "text": "Alcohols",
-            "color": <Number>,
-            "font_color": <Number>,
+            "text": String,
+            "color": Number,
+            "font_color": Number,
         },
-        "available": [
-            <sales area ids>
-        ]
+        "department_available": [ // array of `salesarea` entity ids
+            Number 
+        ],
+        "ml_name": Blob
     }
 }
 ```
@@ -38,7 +39,7 @@ If success:
 {
     "Status": "Ok",
     "StatusCode": 200,
-    "Data": 1234 // new department id
+    "Data": Number // new department id
 }
 ```
 
@@ -48,7 +49,7 @@ In other case returns errors:
 {
     "Status": "Bad request",
     "StatusCode": 400,
-    "Data": "Error text"
+    "Data": String
 }
 ```
 

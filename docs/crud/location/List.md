@@ -2,7 +2,7 @@
 
 ## Request: 
 
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/locations
 ```
 

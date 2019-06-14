@@ -2,22 +2,21 @@
 
 ## Request: 
 
-```http
+```javascript
 POST https://air.untill.com/api/air-bo/1/payment_actions HTTP/1.1
 content-type: application/json
 
 {
     "state": 1,
     "data": {
-        "num": 0,
-        "name": "Pay cash",
-        "hq_id": "Pay cash",
-        "button_code": "pay_cash",
-        "button_text": "Pay cash",
-        "action_data": "",
-        "type": 0,
-        "ml_name": {...},
-        
+        "num": Number,
+        "name": String,
+        "hq_id": String,
+        "button_code": String,
+        "button_text": String,
+        "action_data": String,
+        "type": Number,
+        "ml_name": Blob
     }
 }
 ```
@@ -30,7 +29,7 @@ If success:
 {
     "Status": "Ok",
     "StatusCode": 200,
-    "Data": [ ... ] //created items id
+    "Data": [ Number ] //created items id
 }
 ```
 
@@ -40,7 +39,7 @@ In other case returns errors:
 {
     "Status": "Bad request",
     "StatusCode": 400,
-    "Data": "Error text"
+    "Data": String
 }
 ```
 

@@ -3,39 +3,39 @@
 ## Requests:
 
 **All payment_actions request**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/payment_actions
 ```
 
 **With specified location:**
 
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/payment_actions?location=1
 ```
 
 **With multy-location:**
 
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/payment_actions?location=1&location=44&location=654
 ```
 
 **Specified page and pagesize**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/payment_actions?page=1&pagesize=50
 ```
 
 **Specified order**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/payment_actions?order_by[name]=asc
 ```
 
 **Multy ordering**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/payment_actions?order_by[name]=asc&order_by[location]=desc
 ```
 
 **Specified status**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/payment_actions?show_deleted=1
 ```
 
@@ -122,7 +122,7 @@ If success:
     }
 ```
 
-- `location` object contains of locations, for what payment actions was selected.
+- `location` object contains of all locations, for what payment actions was selected.
 - each `location` in list has all needed data, scpecified by location and that can be used to display `data` entities. In result above this is `name` prop.
 
 In other case returns errors:

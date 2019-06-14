@@ -3,24 +3,24 @@
 ## Requests:
 
 **All category request**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/category
 ```
 
 **With specified location:**
 
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/category?location=1
 ```
 
 **With multy-location:**
 
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/category?location=1&location=44&location=654
 ```
 
 **Specified page and pagesize**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/category?page=1&pagesize=50
 ```
 Used in case of serverside paggination.
@@ -45,14 +45,14 @@ If success:
                 "name": "Location 654",
             },
         },
-        "data": {  //grouped by HQ_ID (or NAME if HQ_ID)
+        "data": {  //grouped by HQ_ID 
             "Bar": { 
                 "1": { // location id
                     "id": 123456,
                     "name": "Bar",
                     "hq_id": "Bar",
                     "state": 0,
-                    "ml_name": {...}
+                    "ml_name": Blob
                 },
 
                 "44": { // location id
@@ -60,7 +60,7 @@ If success:
                     "name": "Bar 1",
                     "hq_id": "Bar",
                     "state": 0,
-                    "ml_name": {...}
+                    "ml_name": Blob
                 }
 
                 "654": { // location id
@@ -68,7 +68,7 @@ If success:
                     "name": "Bar 2",
                     "hq_id": "Bar",
                     "state": 1,
-                    "ml_name": {...}
+                    "ml_name": Blob
                 }
             },
             ...  
@@ -77,7 +77,7 @@ If success:
 }
 ```
 
-- `location` object contains of locations, for what category was selected.
+- `location` object contains of all locations, for what category was selected.
 
 In other case returns errors:
 
@@ -85,7 +85,7 @@ In other case returns errors:
 {
     "Status": "Bad request",
     "StatusCode": 400,
-    "Data": "Error text"
+    "Data": String
 }
 ```
 

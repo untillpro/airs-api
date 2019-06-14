@@ -2,12 +2,8 @@
 
 ## Requests:
 
-`id` - is required parameter. If `id` param is not specified, request will follow [list request](List.md) logic.
-
-**Get category data for all available locations**
-```
-GET https://air.untill.com/api/air-bo-view/category?id=123456
-```
+`id` - required.
+`location` - required.
 
 **Get category data with specified location:**
 
@@ -15,11 +11,6 @@ GET https://air.untill.com/api/air-bo-view/category?id=123456
 GET https://air.untill.com/api/air-bo-view/category?id=123456&location=1
 ```
 
-**Get category data with multy-location:**
-
-```
-GET https://air.untill.com/api/air-bo-view/category?id=123456&location[]=1&location[]=44&location[]=654
-```
 
 ##Response example
 
@@ -47,7 +38,7 @@ If success:
                 "name": "Bar",
                 "hq_id": "Bar",
                 "state": 0,
-                "ml_name": {...}
+                "ml_name": Blob
             },
 
             "44": { // location id
@@ -55,7 +46,7 @@ If success:
                 "name": "Bar 1",
                 "hq_id": "Bar",
                 "state": 0,
-                "ml_name": {...}
+                "ml_name": Blob
             }
 
             "654": { // location id
@@ -63,7 +54,7 @@ If success:
                 "name": "Bar 2",
                 "hq_id": "Bar",
                 "state": 1,
-                "ml_name": {...}
+                "ml_name": Blob
             }
         }
     }
@@ -76,7 +67,7 @@ In other case returns errors:
 {
     "Status": "Bad request",
     "StatusCode": 400,
-    "Data": "Error text"
+    "Data": String
 }
 ```
 

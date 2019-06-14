@@ -2,7 +2,7 @@
 
 ## Request:
 
-```http
+```javascript
 DELETE https://air.untill.com/api/air-bo/1/articles HTTP/1.1
 content-type: application/json
 

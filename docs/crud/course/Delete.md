@@ -2,12 +2,12 @@
 
 ## Request:
 
-```http
+```javascript
 PUT https://air.untill.com/api/air-bo/1/course HTTP/1.1
 content-type: application/json
 
 {
-    "id": [number]
+    "id": [ Number ] // 
 }
 ```
 
@@ -19,7 +19,7 @@ If success:
 {
     "Status": "Ok",
     "StatusCode": 200,
-    "Data": [ ... ] // updated items id array
+    "Data": [ Number ] // updated items id array
 }
 ```
 
@@ -29,7 +29,7 @@ In other case returns errors:
 {
     "Status": "Bad request",
     "StatusCode": 400,
-    "Data": "Error text"
+    "Data": String
 }
 ```
 

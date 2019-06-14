@@ -2,15 +2,15 @@
 
 ## Request: 
 
-```http
+```javascript
 PATCH https://air.untill.com/api/air-bo/1/payment_actions HTTP/1.1
 content-type: application/json
 
 {
-    "id": [number],
+    "id": Number,
     "state": Number
     "data": {
-        [data fields]
+        ...
     }
 }
 ```
@@ -25,7 +25,7 @@ If success:
 
 ```javascript 
     {
-        "id": [ ... ] //updated payment actions id 
+        "id": [ Number ] //updated payment actions id 
     }
 ```
 
@@ -35,7 +35,7 @@ In other case returns errors:
 {
     "Status": "Bad request",
     "StatusCode": 400,
-    "Data": "Error text"
+    "Data": String
 }
 ```
 

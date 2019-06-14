@@ -2,16 +2,16 @@
 
 ## Request: 
 
-```http
+```javascript
 POST https://air.untill.com/api/air-bo/1/articles HTTP/1.1
 content-type: application/json
 
 {
     "data": {
-        "name": "Latte",
-        "hq_id": "Latte" | null,
-        "department": [department id],
-        "course": [course id],
+        "name": String,
+        "hq_id": String,
+        "id_department": Number, // link to 'department' entity
+        "id_course": Number, // link to 'course' entity
         "price": [
             {
                 "price_id": [price id],

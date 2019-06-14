@@ -3,24 +3,24 @@
 ## Requests:
 
 **All course request**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/course
 ```
 
 **With specified location:**
 
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/course?location=1
 ```
 
 **With multy-location:**
 
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/course?location=1&location=44&location=654
 ```
 
 **Specified page and pagesize**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/course?page=1&pagesize=50
 ```
 Used in case of serverside paggination.
@@ -45,7 +45,7 @@ If success:
                 "name": "Location 654",
             },
         },
-        "data": {  //grouped by HQ_ID (or NAME if HQ_ID)
+        "data": {  //grouped by HQ_ID 
             "Frisdranken": { 
                 "1": { // location id
                     "id": 123,
@@ -56,7 +56,7 @@ If success:
                     "coursenumber": 0,
                     "separate": 0,
                     "ask_to_change": 0
-                    "ml_name": { ... }
+                    "ml_name": Blob
                 },
 
                 "44": { // location id
@@ -68,7 +68,7 @@ If success:
                     "coursenumber": 0,
                     "separate": 0,
                     "ask_to_change": 0
-                    "ml_name": { ... }
+                    "ml_name": Blob
                 }
             },
             "Separate": { 
@@ -81,7 +81,7 @@ If success:
                     "coursenumber": 0,
                     "separate": 0,
                     "ask_to_change": 0
-                    "ml_name": { ... }
+                    "ml_name": Blob
                 },
 
                 "654": { // location id
@@ -93,7 +93,7 @@ If success:
                     "coursenumber": 0,
                     "separate": 0,
                     "ask_to_change": 0
-                    "ml_name": { ... }
+                    "ml_name": Blob
                 }
             },
             ...  
@@ -102,7 +102,7 @@ If success:
 }
 ```
 
-- `location` object contains of locations, for what course was selected.
+- `location` object contains of all locations, for what course was selected.
 
 In other case returns errors:
 
@@ -110,7 +110,7 @@ In other case returns errors:
 {
     "Status": "Bad request",
     "StatusCode": 400,
-    "Data": "Error text"
+    "Data": String
 }
 ```
 

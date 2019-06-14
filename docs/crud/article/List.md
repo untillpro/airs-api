@@ -3,39 +3,39 @@
 ## Requests:
 
 **All articles request**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/articles
 ```
 
 **With specified location:**
 
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/articles?location=1
 ```
 
 **With multy-location:**
 
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/articles?location[]=1&location[]=44&location[]=654
 ```
 
 **Specified page and pagesize**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/articles?page=1&pagesize=50
 ```
 
 **Specified order**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/articles?order_by[name]=asc
 ```
 
 **Multy ordering**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/articles?order_by[name]=asc&order_by[location]=desc
 ```
 
 **Specified status**
-```http
+```javascript
 GET https://air.untill.com/api/air-bo-view/articles?show_deleted=1
 ```
 In this case articles with status 2 will be also returned
@@ -138,7 +138,7 @@ If success:
                 }
             },
         },
-        "items": {  //grouped by HQ_ID (or NAME if HQ_ID)
+        "items": {  //grouped by HQ_ID 
             "Ace": { 
                 "1": { // location id
                     "id": 123456,
@@ -234,7 +234,7 @@ If success:
     }
 ```
 
-- `location` object contains of locations, for what articles was selected.
+- `location` object contains of all locations, for what articles was selected.
 - each `location` in list has all needed data, scpecified by location and that can be used to display `items` entities. In result above this is `currency` and `sales_area` entities.
 
 In other case returns errors:

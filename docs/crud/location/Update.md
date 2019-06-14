@@ -2,7 +2,7 @@
 
 ## Request: 
 
-```http
+```javascript
 PATCH https://air.untill.com/api/air-bo-view/locations HTTP/1.1
 content-type: application/json
 
