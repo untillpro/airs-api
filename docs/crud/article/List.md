@@ -46,7 +46,7 @@ If success:
 
 ```javascript
     {
-        "locations": { //all selected locations
+        "classifiers": { //all selected locations
             "1": {
                 "name": "Location 1",
                 "currency": { //all used currencies
@@ -60,6 +60,13 @@ If success:
                         "round_down": 0,
                         "eurozone": 1
                     }
+                },
+                "course": "Changable1",
+                "department": {
+                    "1000001": {
+                            "id": 1000001,
+                            "name": "Frisdranken"
+                        }
                 },
                 "sales_area": {
                     "5000000081": {
@@ -99,6 +106,12 @@ If success:
                         "eurozone": 1
                     }
                 },
+                "department": {
+                    "1000001": {
+                            "id": 1000001,
+                            "name": "Frisdranken"
+                        }
+                },
                 "sales_area": {
                     "5000123123": {
                         "id": 5000123123,
@@ -128,6 +141,12 @@ If success:
                         "eurozone": 0
                     },
                 },
+                "department": {
+                    "1000001": {
+                            "id": 1000001,
+                            "name": "Frisdranken"
+                        }
+                },
                 "sales_area": {
                     "12341234": {
                         "id": 12341234,
@@ -138,19 +157,13 @@ If success:
                 }
             },
         },
-        "items": {  //grouped by HQ_ID 
+        "data": {  //grouped by HQ_ID 
             "Ace": { 
                 "1": { // location id
                     "id": 123456,
                     "name": "Ace",
                     "hq_id": "Ace",
                     "number": 1,
-                    "department": [
-                        {
-                            "id": 1000001,
-                            "name": "Frisdranken"
-                        }
-                    ],
                     "prices": [
                         {
                             "id": 500001,
