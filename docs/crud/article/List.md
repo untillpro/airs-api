@@ -61,12 +61,23 @@ If success:
                         "eurozone": 1
                     }
                 },
-                "course": "Changable1",
+                "course": {
+                    "12345": {
+                        "id": 12345,
+                        "name": String,
+                        "hq_id": String,
+                        "changable": Number,
+                        "coursenumber": Number,
+                        "separate": Number,
+                        "ask_to_change": Number
+                        "ml_name": Blob
+                    }
+                },
                 "department": {
                     "1000001": {
-                            "id": 1000001,
-                            "name": "Frisdranken"
-                        }
+                        "id": 1000001,
+                        "name": "Frisdranken"
+                    }
                 },
                 "sales_area": {
                     "5000000081": {
@@ -106,11 +117,23 @@ If success:
                         "eurozone": 1
                     }
                 },
+                "course": {
+                    "22222": {
+                        "id": 22222,
+                        "name": String,
+                        "hq_id": String,
+                        "changable": Number,
+                        "coursenumber": Number,
+                        "separate": Number,
+                        "ask_to_change": Number
+                        "ml_name": Blob
+                    }
+                },
                 "department": {
                     "1000001": {
-                            "id": 1000001,
-                            "name": "Frisdranken"
-                        }
+                        "id": 1000001,
+                        "name": "Frisdranken"
+                    }
                 },
                 "sales_area": {
                     "5000123123": {
@@ -141,11 +164,23 @@ If success:
                         "eurozone": 0
                     },
                 },
+                "course": {
+                    "33333": {
+                        "id": 33333,
+                        "name": String,
+                        "hq_id": String,
+                        "changable": Number,
+                        "coursenumber": Number,
+                        "separate": Number,
+                        "ask_to_change": Number
+                        "ml_name": Blob
+                    }
+                },
                 "department": {
                     "1000001": {
-                            "id": 1000001,
-                            "name": "Frisdranken"
-                        }
+                        "id": 1000001,
+                        "name": "Frisdranken"
+                    }
                 },
                 "sales_area": {
                     "12341234": {
@@ -193,7 +228,7 @@ If success:
                     "sales_area": [
                         15000024292
                     ], //aggregated 
-                    "course": "Fastrunners",
+                    "course": 12345,
                     "status": 1
                 },
 
@@ -238,7 +273,7 @@ If success:
                         5000000081,
                         15000024291
                     ],
-                    "course": "Changable1",
+                    "course": 33333,
                     "status": 2
                 }
             },
