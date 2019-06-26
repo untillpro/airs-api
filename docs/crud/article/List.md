@@ -199,6 +199,7 @@ If success:
                     "name": "Ace",
                     "hq_id": "Ace",
                     "number": 1,
+                    "department": [1000001],
                     "prices": [
                         {
                             "id": 500001,
@@ -237,12 +238,7 @@ If success:
                     "name": "Ace 2",
                     "hq_id": "Ace",
                     "number": 2,
-                    "department": [
-                        {
-                            "id": 1000002,
-                            "name": "Fastrunnerz"
-                        }
-                    ],
+                    "department": [1000001],
                     "prices": [
                         {
                             "id": 500001,
