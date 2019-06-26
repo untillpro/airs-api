@@ -16,7 +16,7 @@ GET https://air.untill.com/api/air-bo-view/articles?location=1
 **With multy-location:**
 
 ```javascript
-GET https://air.untill.com/api/air-bo-view/articles?location[]=1&location[]=44&location[]=654
+GET https://air.untill.com/api/air-bo-view/articles?location=1&location=44&location=654
 ```
 
 **Specified page and pagesize**
@@ -95,7 +95,7 @@ If success:
                     "15000043077": {
                         ...
                     },
-                    ,"15000043080": {
+                    "15000043080": {
                         ...
                     },
                     "15000045151": {
@@ -115,7 +115,8 @@ If success:
                         "alignment": 0,
                         "round_down": 0,
                         "eurozone": 1
-                    }
+                    },
+                    ...
                 },
                 "course": {
                     "22222": {
@@ -127,13 +128,15 @@ If success:
                         "separate": Number,
                         "ask_to_change": Number
                         "ml_name": Blob
-                    }
+                    },
+                    ...
                 },
                 "department": {
                     "1000001": {
                         "id": 1000001,
                         "name": "Frisdranken"
-                    }
+                    },
+                    ...
                 },
                 "sales_area": {
                     "5000123123": {
@@ -199,11 +202,11 @@ If success:
                     "name": "Ace",
                     "hq_id": "Ace",
                     "number": 1,
-                    "department": [1000001],
+                    "id_department": [1000001],
                     "prices": [
                         {
                             "id": 500001,
-                            "price_id": 600001,
+                            "id_price": 600001,
                             "name": "Normaal",
                             "value": 1.89,
                             "vat": 10,
@@ -211,7 +214,7 @@ If success:
                         },
                         {
                             "id": 500002,
-                            "price_id": 600002,
+                            "id_price": 600002,
                             "name": "Price2",
                             "value": 1.19,
                             "vat": 0,
@@ -219,14 +222,14 @@ If success:
                         },
                         {
                             "id": 500003,
-                            "price_id": 600003,
+                            "id_price": 600003,
                             "name": "Price3",
                             "value": 1.06,
                             "vat": 0,
                             "currency": 999991
                         }
                     ],
-                    "sales_area": [
+                    "id_sales_area": [
                         15000024292
                     ], //aggregated 
                     "course": 12345,
@@ -238,11 +241,11 @@ If success:
                     "name": "Ace 2",
                     "hq_id": "Ace",
                     "number": 2,
-                    "department": [1000001],
+                    "id_department": [1000001],
                     "prices": [
                         {
                             "id": 500001,
-                            "price_id": 600001,
+                            "id_price": 600001,
                             "name": "Normaal",
                             "value": 2.5,
                             "vat": 10,
@@ -250,7 +253,7 @@ If success:
                         },
                         {
                             "id": 500002,
-                            "price_id": 600002,
+                            "id_price": 600002,
                             "name": "Price2",
                             "value": 2.2,
                             "vat": 0,
@@ -258,14 +261,14 @@ If success:
                         },
                         {
                             "id": 500003,
-                            "price_id": 600003,
+                            "id_price": 600003,
                             "name": "Price3",
                             "value": 2.1,
                             "vat": 0,
                             "currency": 999992
                         }
                     ],
-                    "sales_area": [
+                    "id_sales_area": [
                         5000000081,
                         15000024291
                     ],
@@ -278,16 +281,16 @@ If success:
     }
 ```
 
-- `location` object contains of all locations, for what articles was selected.
-- each `location` in list has all needed data, scpecified by location and that can be used to display `items` entities. In result above this is `currency` and `sales_area` entities.
+- `classifiers` object contains of all locations, for what articles was selected.
+- each `classifiers` in list has all needed data, scpecified by location and that can be used to display `items` entities.
 
 In other case returns errors:
 
 ```javascript
 {
-    "errors": [
-        String | Object
-    ]
+    "Status": "Bad request",
+    "StatusCode": 400,
+    "Data": String
 }
 ```
 
