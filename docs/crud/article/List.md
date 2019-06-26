@@ -46,7 +46,7 @@ If success:
 
 ```javascript
     {
-        "locations": { //all selected locations
+        "classifiers": { //all selected locations
             "1": {
                 "name": "Location 1",
                 "currency": { //all used currencies
@@ -59,6 +59,24 @@ If success:
                         "alignment": 0,
                         "round_down": 0,
                         "eurozone": 1
+                    }
+                },
+                "course": {
+                    "12345": {
+                        "id": 12345,
+                        "name": String,
+                        "hq_id": String,
+                        "changable": Number,
+                        "coursenumber": Number,
+                        "separate": Number,
+                        "ask_to_change": Number
+                        "ml_name": Blob
+                    }
+                },
+                "department": {
+                    "1000001": {
+                        "id": 1000001,
+                        "name": "Frisdranken"
                     }
                 },
                 "sales_area": {
@@ -99,6 +117,24 @@ If success:
                         "eurozone": 1
                     }
                 },
+                "course": {
+                    "22222": {
+                        "id": 22222,
+                        "name": String,
+                        "hq_id": String,
+                        "changable": Number,
+                        "coursenumber": Number,
+                        "separate": Number,
+                        "ask_to_change": Number
+                        "ml_name": Blob
+                    }
+                },
+                "department": {
+                    "1000001": {
+                        "id": 1000001,
+                        "name": "Frisdranken"
+                    }
+                },
                 "sales_area": {
                     "5000123123": {
                         "id": 5000123123,
@@ -128,6 +164,24 @@ If success:
                         "eurozone": 0
                     },
                 },
+                "course": {
+                    "33333": {
+                        "id": 33333,
+                        "name": String,
+                        "hq_id": String,
+                        "changable": Number,
+                        "coursenumber": Number,
+                        "separate": Number,
+                        "ask_to_change": Number
+                        "ml_name": Blob
+                    }
+                },
+                "department": {
+                    "1000001": {
+                        "id": 1000001,
+                        "name": "Frisdranken"
+                    }
+                },
                 "sales_area": {
                     "12341234": {
                         "id": 12341234,
@@ -138,19 +192,14 @@ If success:
                 }
             },
         },
-        "items": {  //grouped by HQ_ID 
+        "data": {  //grouped by HQ_ID 
             "Ace": { 
                 "1": { // location id
                     "id": 123456,
                     "name": "Ace",
                     "hq_id": "Ace",
                     "number": 1,
-                    "department": [
-                        {
-                            "id": 1000001,
-                            "name": "Frisdranken"
-                        }
-                    ],
+                    "department": [1000001],
                     "prices": [
                         {
                             "id": 500001,
@@ -180,7 +229,7 @@ If success:
                     "sales_area": [
                         15000024292
                     ], //aggregated 
-                    "course": "Fastrunners",
+                    "course": 12345,
                     "status": 1
                 },
 
@@ -189,12 +238,7 @@ If success:
                     "name": "Ace 2",
                     "hq_id": "Ace",
                     "number": 2,
-                    "department": [
-                        {
-                            "id": 1000002,
-                            "name": "Fastrunnerz"
-                        }
-                    ],
+                    "department": [1000001],
                     "prices": [
                         {
                             "id": 500001,
@@ -225,7 +269,7 @@ If success:
                         5000000081,
                         15000024291
                     ],
-                    "course": "Changable1",
+                    "course": 33333,
                     "status": 2
                 }
             },

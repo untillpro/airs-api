@@ -12,19 +12,11 @@ content-type: application/json
         "hq_id": String,
         "id_department": Number, // link to 'department' entity
         "id_course": Number, // link to 'course' entity
-        "price": [
-            {
-                "price_id": [price id],
-                "value": [number],
-                "currency": [currency id],
-                "vat": [number]
-            },
+        "id_appearance": [
+            ... //links to `appearance` entity //what is appearance?
         ],
-        "appearance": [
-            ...
-        ],
-        "options": [
-            ...
+        "id_option": [
+            ... //links to `option` entity
         ],
         ...
     }
@@ -36,18 +28,20 @@ content-type: application/json
 If success:
 
 ```javascript 
-    {
-        "id": [ "???" ] //created articles id or read-like data?
-    }
+{
+    "Status": "Ok",
+    "StatusCode": 200,
+    "Data": Number // created item id
+}
 ```
 
 In other case returns errors:
 
 ```javascript
 {
-    "errors": [
-        String | Object
-    ]
+    "Status": "Status Text",
+    "StatusCode": 400, //status code
+    "Data": String
 }
 ```
 

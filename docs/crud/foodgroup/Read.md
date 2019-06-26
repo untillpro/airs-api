@@ -23,11 +23,11 @@ If success:
         "locations": { //all selected locations
             "1": {
                 "name": "Location 1",
-                "categories": [...], // array of 'category' entity in that location,
+                "categories": [...], // array of 'category' entity in that location, //why you need this here?
             },
             "44": {
                 "name": "Location 44",
-                "categories": [...], // array of 'category' entity in that location,
+                "categories": [...], // array of 'category' entity in that location, //why you need this here?
             }
         },
         "data" : {
