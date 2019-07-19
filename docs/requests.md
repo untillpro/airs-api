@@ -2,6 +2,15 @@
 
 This document describes a way to send modification/view requests to unTill Air cluster
 
+# Site Structure
+
+- /
+  - Air Shell
+- /api
+  - Queues
+- /plugins
+  - Air Shell plugins
+
 # Queues
 
 - Request always comes to a queue
@@ -24,7 +33,7 @@ Router has to be able to calculate `partition-number` for partitioned queues.
 
 # URL Path Segments
 
-`<proto>://<site>/<queue-alias>/<partition-dividend>/<resource-name>/<resource-id>`
+`<proto>://<site>/api/<queue-alias>/<partition-dividend>/<resource-name>/<resource-id>`
 
 All parts are optional
 
