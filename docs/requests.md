@@ -70,35 +70,19 @@ All parts are optional
 
 ## Viewing BO
 
-  - Get all articles from location 678
-    - `GET air.untill.com/api/air-bo-view/678/articles`
-    - `GET air.untill.com/api/air-bo-view/articles?location=678`
-  - Get article with ID=5000002361 from location 678
-    - `GET air.untill.com/api/air-bo-view/678/articles?id=5000002361`
-    - `GET air.untill.com/api/air-bo-view/articles?location=678&id=5000002361`
-  - Get special representation of article with ID=5000002361 from location 678
-    - `GET air.untill.com/api/air-bo-view/678/articles/special?id=5000002361`
-  - Get articles from locations 1 and 2 where name contains coca
-    - `GET air.untill.com/api/air-bo-view/articles/?location[]=1&location[]=2&where[name][contains]=coca`
-  - *Get list of resources from location 678* (?)
-    - `GET air.untill.com/api/air-bo-view/678`
+```json
+POST /api/air-bo-view/articles
+content-type: application/json
 
-## Registering Sales
+{"location":[2],"show_deleted":1,"page":1,"page_size":20}
+```
 
-  - `POST air.untill.com/air-pos/678/journal`
+```json
+POST /api/air-bo-view/articles
+content-type: application/json
 
-## Password Authentication
-
-- `GET/POST air.untill.com/api/registry/auth?usr=<user-name>&pwd=<password>`
-
-## Modifying Registry
-
-Registry is a single-party queue, so workspace is not specified
-
-- `POST/PATCH air.untill.com/api/registry/workspaces`
-- `POST/PATCH air.untill.com/api/registry/users`
-- `POST/PATCH air.untill.com/api/registry/devices`
-- `POST/PATCH air.untill.com/api/registry/applications`
+{"entries":[{"id":5000000158,"location":2}]}
+```
 
 ## Available Modules
 
