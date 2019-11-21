@@ -63,10 +63,11 @@ All parts are optional
 
 ## Configuring BO
 
-  - New/Edit article: `POST/PATCH air.untill.com/api/air-bo/678/articles`
-    - id is always passsed as a part of body
-  - Doing something special with article: `POST air.untill.com/api/air-bo/678/articles.doSpecial`
-    - id is always passsed as a part of body    
+  - New/Edit article: `POST air.untill.com/api/airs-bp/678/conf`
+    - ID is always passsed as a part of body
+    - Negative ID means `insert` operation
+  - Add POS operation: `POST air.untill.com/api/airs-bp/678/ops`
+  - Special operation: `POST air.untill.com/api/airs-bp/678/<operation>`
 
 ## Viewing BO
 
