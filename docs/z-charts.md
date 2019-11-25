@@ -2,7 +2,7 @@
 
 ```mermaid z-charts-queue-types.png
 graph TB
-    subgraph Queue Types
+    subgraph "Queue Types"
     Queue-->Partitioned
     Queue-->Anarchy[Non-party]
     Partitioned-->One-party
@@ -13,7 +13,7 @@ graph TB
 
 ```mermaid z-charts-queue-types-ex.png
 graph TB
-    subgraph Queue Types
+    subgraph "Queue Types"
     Queue-->Partitioned[Partitioned, parts > 0]
     Queue-->Non-party[Non-party, parts == 0]
     Partitioned-->Multi-party[Multi-party, parts > 1]
@@ -37,14 +37,14 @@ graph TB
 
     Client-->|Start|HttpHandler
 
-    subgraph Router    
+    subgraph Router
       HttpHandler
     end
 
     HttpHandler-->Queue
     Queue-->NATSBalancer
 
-    subgraph Journal App
+    subgraph "Journal App"
       NATSBalancer-->Reducer
       Reducer-->Deduplicator
       Deduplicator-->Serializer
@@ -92,7 +92,7 @@ graph TB
 
     Queue-->Deduplicator
 
-    subgraph Journal App
+    subgraph "Journal App"
       Deduplicator
       Serializer
     end
