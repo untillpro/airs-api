@@ -169,7 +169,7 @@ All parts are optional
     {"wsid":[2],"show_deleted":1,"page":1,"page_size":20}
     ```
 
-  - Response view in json with `classifiers` and `total` size of `articles` 
+  - Response view in json with `articles`, `classifiers` and `total` size of `articles` 
     
 ## Viewing Journal
 
