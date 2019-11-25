@@ -72,17 +72,35 @@ All parts are optional
 ## Viewing BO
 
 ```json
-POST /api/air-bo-view/articles
+POST /api/airs-bp-view/collection/articles
 content-type: application/json
 
 {"location":[2],"show_deleted":1,"page":1,"page_size":20}
 ```
 
 ```json
-POST /api/air-bo-view/articles
+POST /api/airs-bp-view/collection/articles
 content-type: application/json
 
 {"entries":[{"id":5000000158,"location":2}]}
+```
+
+## Viewing Journal
+
+```json
+POST /api/airs-bp-view/journal
+content-type: application/json
+
+{"location":[2],"show_deleted":1,"page":1,"page_size":20}
+```
+
+## Viewing State
+
+```json
+POST /api/airs-bp-view/state
+content-type: application/json
+
+{"location":[2],"show_deleted":1,"page":1,"page_size":20}
 ```
 
 ## Available Modules
