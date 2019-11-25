@@ -58,7 +58,6 @@ All parts are optional
   - `air.untill.com/api/air-bo/678/articles.v2`
   - `air.untill.com/api/air-bo/678/articles2`
 
-
 # Requests Examples
 
 ## Configuring BO
@@ -199,17 +198,7 @@ All parts are optional
 ## Available Modules
 
 - Get list of available module manifests
-  - `GET air.untill.com/api/modules/manifests`
-- Get module index.html
-  - `GET air.untill.com/api/modules/content/untillpro.md-mermaid-renderer/index.html`
-
-
-## Module Config
-
-- Get config, JSON
-  - `GET air.untill.com/api/users-view/config/untillpro.md-mermaid-renderer`
-- Save config, JSON
-  - `POST air.untill.com/api/users/config/<module-id>`
+  - `POST air.untill.com/api/modules/manifest`
 
 # Links
 
