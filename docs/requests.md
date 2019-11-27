@@ -66,9 +66,6 @@ All parts are optional
     - ID is always passsed as a part of body
     - Negative ID means `insert` operation
     - Request
-    
-        POST /api/airs-bp-view/collection/articles
-        content-type: application/json
        
         ```json
         {
@@ -120,19 +117,20 @@ All parts are optional
         }
         ```
         
-    - Response returns created IDs
+    - Response returns map userID (negative value) -> serverID
     
         ```json
-        [1,2,3]
+        {
+          "-1243": 1,
+          "-1243123": 2,
+          "-12431235": 3
+        }   
         ```
         
   - Add POS operation: `POST air.untill.com/api/airs-bp/678/ops`
     - Request
-    
-        POST /api/airs-bp-view/collection/articles
-        content-type: application/json
        
-        part of real pbill for demonstration
+        (part of real pbill for demonstration)
         ```json
         {
           "type": "pbill",
@@ -161,9 +159,7 @@ All parts are optional
 
 ## Viewing BO
 
-  - Request
-    POST /api/airs-bp-view/collection/articles
-    content-type: application/json
+  - Request `POST /api/airs-bp-view/collection/articles`
 
     ```json
     {"wsid":[2],"show_deleted":1,"page":1,"page_size":20}
@@ -173,9 +169,7 @@ All parts are optional
     
 ## Viewing Journal
 
-  - Request
-    POST /api/airs-bp-view/journal
-    content-type: application/json
+  - Request `POST /api/airs-bp-view/journal`
     
     ```json
     {"wsid":2,"table_names":["articles", "category"],"last_offset": 5}
@@ -185,9 +179,7 @@ All parts are optional
     
 ## Viewing State
 
-  - Request
-    POST /api/airs-bp-view/state
-    content-type: application/json
+  - Request `POST /api/airs-bp-view/state`
 
     ```json
     {"wsid":2,"table_names":["articles", "category"]}
