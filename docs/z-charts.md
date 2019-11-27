@@ -16,7 +16,6 @@ graph TB
     subgraph "Queue Types"
     Queue-->Partitioned[Partitioned, parts > 0]
     Queue-->Non-party[Non-party, parts == 0]
-    Partitioned-->One-party[One-party, parts == 1]
     Partitioned-->Multi-party[Multi-party, parts > 1]
     end
 ```

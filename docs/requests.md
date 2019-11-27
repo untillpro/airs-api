@@ -58,7 +58,6 @@ All parts are optional
   - `air.untill.com/api/air-bo/678/articles.v2`
   - `air.untill.com/api/air-bo/678/articles2`
 
-
 # Requests Examples
 
 ## Configuring BO
@@ -66,57 +65,132 @@ All parts are optional
   - New/Edit article: `POST air.untill.com/api/airs-bp/678/conf`
     - ID is always passsed as a part of body
     - Negative ID means `insert` operation
+    - Request
+       
+        ```json
+        {
+          "operations": [    
+           {
+              "id": -1243,
+              "type": "sales_area",
+              "data": {
+                "id_prices": 5000000000001,
+                "bmanual": 12,
+                "name": "sa",
+                "hq_id": "sa",
+                "state": 1
+              }
+           },       
+           {
+              "id": -1243123,
+              "type": "sales_area_exceptions",
+              "parent_id": -1243,
+              "parent_type": "sales_area",
+              "doc_id": -1243,
+              "doc_type": "sales_area",
+              "data": {
+                "id_prices": 5000000000001,
+                "id_periods": 5000000000003,
+                "id_sales_area": 5000000000005,
+                "name": "sae1",
+                "hq_id": "sae1",
+                "state": 1
+              }
+            },
+            {
+              "id": -12431235,
+              "type": "sales_area_exceptions",
+              "parent_id": -1243,
+              "parent_type": "sales_area",
+              "doc_id": -1243,
+              "doc_type": "sales_area",
+              "data": {
+                "id_prices": 5000000000001,
+                "id_periods": 5000000000003,
+                "id_sales_area": 5000000000005,
+                "name": "sae2",
+                "hq_id": "sae2",
+                "state": 1
+              }
+            }
+          ]
+        }
+        ```
+        
+    - Response returns map userID (negative value) -> serverID
+    
+        ```json
+        {
+          "-1243": 1,
+          "-1243123": 2,
+          "-12431235": 3
+        }   
+        ```
+        
   - Add POS operation: `POST air.untill.com/api/airs-bp/678/ops`
+    - Request
+       
+        (part of real pbill for demonstration)
+        ```json
+        {
+          "type": "pbill",
+          "data": {
+            "id": 0,
+            "id_bill": 1,
+            "id_untill_users": 2,
+            "number": 3,
+            "failurednumber": 4,
+            "suffix": "str5",
+            "pdatetime": "str6",
+            "id_sales_area": 7,
+            "pcname": "str8",
+            "service_charge": 9,
+            "real_datetime": "str10",
+            "tips": 11
+           }
+         }
+        ```
+        
+    - Response
+    
+        "ok"
+        
   - Special operation: `POST air.untill.com/api/airs-bp/678/<operation>`
 
 ## Viewing BO
 
-```json
-POST /api/airs-bp-view/collection/articles
-content-type: application/json
+  - Request `POST /api/airs-bp-view/collection/articles`
 
-{"location":[2],"show_deleted":1,"page":1,"page_size":20}
-```
+    ```json
+    {"wsid":[2],"show_deleted":1,"page":1,"page_size":20}
+    ```
 
-```json
-POST /api/airs-bp-view/collection/articles
-content-type: application/json
-
-{"entries":[{"id":5000000158,"location":2}]}
-```
-
+  - Response view in json with `articles`, `classifiers` and `total` size of `articles` 
+    
 ## Viewing Journal
 
-```json
-POST /api/airs-bp-view/journal
-content-type: application/json
-
-{"location":[2],"show_deleted":1,"page":1,"page_size":20}
-```
-
+  - Request `POST /api/airs-bp-view/journal`
+    
+    ```json
+    {"wsid":2,"table_names":["articles", "category"],"last_offset": 5}
+    ```
+    
+  - Response journal
+    
 ## Viewing State
 
-```json
-POST /api/airs-bp-view/state
-content-type: application/json
+  - Request `POST /api/airs-bp-view/state`
 
-{"location":[2],"show_deleted":1,"page":1,"page_size":20}
-```
-
+    ```json
+    {"wsid":2,"table_names":["articles", "category"]}
+    ```
+    
+  - Response state in `json`
+    
 ## Available Modules
 
 - Get list of available module manifests
-  - `GET air.untill.com/api/modules/manifests`
-- Get module index.html
-  - `GET air.untill.com/api/modules/content/untillpro.md-mermaid-renderer/index.html`
-
-
-## Module Config
-
-- Get config, JSON
-  - `GET air.untill.com/api/users-view/config/untillpro.md-mermaid-renderer`
-- Save config, JSON
-  - `POST air.untill.com/api/users/config/<module-id>`
+  - `POST air.untill.com/api/modules/manifest`
 
 # Links
 
