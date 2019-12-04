@@ -167,15 +167,15 @@ All parts are optional
 
   - Response view in json with `articles`, `classifiers` and `total` size of `articles` 
     
-## Viewing Journal
+## Viewing Log
 
-  - Request `POST /api/airs-bp-view/journal`
-    
+  - Request `POST /api/airs-bp-view/log`
+      - Use ? to filter log events (now avaliable `type`(e.g. type=pbill) and `timestamp` in millis(e.g. from=123412&to=12344124124))
     ```json
-    {"wsid":2,"table_names":["articles", "category"],"last_offset": 5}
+    {"wsid":2,"from_offset":1,"to_offset": 5}
     ```
     
-  - Response journal
+  - Response log
     
 ## Viewing State
 
